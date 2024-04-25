@@ -49,5 +49,6 @@ jobs:
           script: |
             cd projects
             docker pull sawalrever23/learn-github-action:latest
-            docker compose down && docker compose up -d
+            docker stop learn-github-action || true
+            docker run -d -p 8080:8080 -it --rm --name learn-github-action sawalrever23/learn-github-action:latest
 

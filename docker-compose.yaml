@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  learn-github-action-service:
+    build: .
+    ports:
+      - 8080:8080
+    restart: on-failure
